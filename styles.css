@@ -1,0 +1,335 @@
+body{
+    margin: 0;
+    padding-top: 60px;
+    background-color: #061420;
+    color: white;
+}
+section{
+    height: 100%;
+    padding: 60px 20px;
+    background-color: black;
+}
+section h2{
+    text-align: center;
+}
+/* Nav */
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+.nav-content{
+    margin: 0 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-content a{
+    text-decoration: none;
+    color: white;
+}
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+.navbar-nav li{
+    padding: 5px 10px;
+}
+.nav-item:hover{
+    background-color: rgb(100, 100, 100);
+    border-radius: 10px 10px 0 0;
+}
+
+/* About Me*/
+.about-me-section{
+    background-color: #082032;
+    padding: 20px 0;
+}
+.about-me{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.profile{
+    width: 180px;
+    height: auto;
+    border-radius: 20px;
+}
+.about-me-text{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about-me-text p{
+    text-align: justify;
+}
+.softskills{
+    margin: 10px 20px;
+    text-align: center;
+}
+.download-cv{
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+}
+.download-cv:hover{
+    background-color: white;
+    color: black;
+}
+
+/* Projects */
+.project-item{
+    width: 100%;
+    background-color: #082032;
+    border-radius: 15px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.project-item-header{
+    text-align: center;
+}
+.project-item-details{
+    display: flex;
+    justify-content: center;
+}
+.project-content{
+    width: 90%;
+    text-align: center;
+}
+
+.appweb, .appmovil{
+    overflow: hidden;
+}
+
+.appweb a, .appmovil a, .webapi a, .msc-app a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.appweb a:hover, .appmovil a:hover,
+ .webapi a:hover, .msc-app a:hover{
+    background-color: white;
+    color: black;
+}
+
+.appmovil ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    animation: slider_mobile_animation 50s linear infinite;
+    animation-play-state: running;
+
+    --appmovil-total-items: 20;
+}
+.appweb ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    animation: slider_animation 100s linear infinite;
+    animation-play-state: running;
+
+    --total-items: 15;
+}
+.appweb ul:hover, .appmovil ul:hover{
+    animation-play-state: paused;
+}
+
+.appweb ul li, .appmovil ul li{
+    margin: 0 10px;
+}
+
+.appmovil ul li img{
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+.appweb ul li img{
+    width: 700px;
+    height: auto;
+    border-radius: 20px;
+}
+
+@keyframes slider_animation{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-720px * var(--total-items)));
+    }
+}
+
+@keyframes slider_mobile_animation{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-280px * (var(--appmovil-total-items) - 5)));
+    }
+}
+
+
+.apiStructure{
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.apiStructure img{
+    width: auto;
+    height: 300px;
+
+}
+.apiStructure-text{
+    width: 50%;
+}
+.apiStructure-text p{
+    text-align: left;
+}
+.apiStructure-text ul li{
+    text-align: left;
+}
+.apiImages{
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.apiImages img{
+    width: auto;
+    height: 150px;
+    border-radius: 10px;
+}
+
+
+.microservicesProject{
+    margin: 20px 0;
+}
+.microservicesImages{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.microservicesImages img{
+    height: 200px;
+    width: auto;
+}
+.msc-info{
+    margin: auto;
+    width: 80%;
+}
+.microservicesProject dl{
+    text-align: left;
+}
+.msc-demo-image{
+    height: 300px;
+    width: auto;
+}
+/* Skills */
+#skills{
+    background-color: #082032;
+    
+}
+.skills-section h3{
+    text-align: center;
+}
+
+.skills-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.skill-icon{
+    width: auto;
+    height: 50px;
+}
+
+/*Contact */
+.contact-section img{
+    width: 30px;
+    height: auto;
+}
+.contact-section p{
+    text-align: center;
+}
+.contact-section div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.contact-section div a{
+    color: white;
+}
+
+/*Footer*/
+.footer{
+    background-color: black;
+    /* color: white; */
+    padding: 20px;
+}
+
+@media screen and (max-width:650px ) {
+    body{
+        padding-top: 88px;
+    }
+    section{
+        padding-top: 70px;
+    }
+    .nav-content{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .nav-content> a{
+        font-size:  x-large;
+    }
+    .about-me{
+        flex-direction: column;
+    }
+    .about-me-text{
+        width: 80%;
+        p{
+            text-align: center;
+        }
+    }
+    .apiStructure{
+        flex-direction: column;
+    }
+    .apiStructure-text{
+        width: 90%;
+    }
+    .msc-demo-image{
+        height: 190px;
+        width: auto;
+    }
+}
